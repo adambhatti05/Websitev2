@@ -1073,10 +1073,11 @@ True
 <p>The lab links open your own submission ("Changes will not be saved"), so you can read your code without changing anything.</p>
 
 <h1 id="finder">Quick Finder</h1>
-<p>Two lookup tables for the exam: every question the course has asked, and every function in this manual with links to where it is used. Both filter as you type. For anything else, use the search box at the top (press <span class="kbd">/</span>). Hover any heading and click ☆ to pin it to the ★ Pins menu.</p>
+<p>Two lookup tables for the exam: every question the course has asked, and every function in this manual with links to where it is used. Both filter as you type, and pressing <span class="kbd">Enter</span> jumps to the first match. Hover any heading and click ☆ to pin it to the ★ Pins menu.</p>
+<div class="box box-tip"><div class="box-title">Finding things without 50 Ctrl/⌘-F hits</div><div class="box-body"><ol><li><strong>Top search box</strong> (press <span class="kbd">/</span>): lists matching <em>sections</em>, best first. Use ↑↓ and Enter to jump. Two words narrow it a lot: <code>groupby max</code>, <code>pivot count</code>, <code>linspace inclusive</code>.</li><li><strong>⚲ Scope</strong> (top bar): hides whole parts. Hidden text is skipped by Ctrl/⌘-F, so "Quick lookup only" cuts <code>linspace</code> from about 56 hits to 6.</li><li><strong>Question bank / method index filters</strong> (below): type a method or task word, then press Enter.</li><li>With Ctrl/⌘-F, search with the punctuation: <code>np.linspace(</code>, <code>.pivot_table(</code>, <code>idxmax()</code>. That skips prose mentions.</li></ol></div></div>
 <h2 id="qb">Question bank: every question asked so far</h2>
 <p>All questions from both practice midterms, both homeworks, every lab and every lecture practice notebook. Each row gives the core idea in one line and a link to the full worked solution. Type in the box to filter by any word: a method (<code>pivot_table</code>), a task word (<code>closest</code>, <code>top</code>, <code>each year</code>) or a source (<code>HW2</code>, <code>Lab 8</code>).</p>
-<div class="filterbox"><input type="search" class="tfilter" data-target="qb-table" placeholder="Filter questions… e.g. groupby, closest, Lab, regex" aria-label="Filter the question bank"><span class="fcount"></span></div>
+<div class="fwrap"><div class="filterbox"><input type="search" class="tfilter" data-target="qb-table" placeholder="Filter questions… e.g. groupby, closest, Lab, regex" aria-label="Filter the question bank"><span class="fcount"></span></div>
 <table id="qb-table" class="qbt"><thead><tr><th>Source</th><th>Question</th><th>Core idea (full solution via link)</th><th>Page</th></tr></thead><tbody>
 <tr data-k="midterm s26 · ex1 q1a 24 evenly spaced readings between 58.0 and 89.5 temps = np.linspace(58.0, 89.5, 24) numpy linspace"><td class="qb-src">Midterm S26 · Ex1 Q1a</td><td>24 evenly spaced readings between 58.0 and 89.5</td><td><code>temps = np.linspace(58.0, 89.5, 24)</code></td><td><a class="pageref" href="#q-e1-q1a"></a></td></tr>
 <tr data-k="midterm s26 · ex1 q1b readings from hour 6 through hour 12 inclusive temps[6:13] numpy slice inclusive"><td class="qb-src">Midterm S26 · Ex1 Q1b</td><td>Readings from hour 6 through hour 12 inclusive</td><td><code>temps[6:13]</code></td><td><a class="pageref" href="#q-e1-q1b"></a></td></tr>
@@ -1146,11 +1147,11 @@ True
 <tr data-k="lecture 6.3 due dates: to_datetime, minus 7 days, weekday, days between, date_range pd.date_range(start, end, periods=9) datetime timedelta date_range"><td class="qb-src">Lecture 6.3</td><td>Due dates: to_datetime, minus 7 days, weekday, days between, date_range</td><td><code>pd.date_range(start, end, periods=9)</code></td><td><a class="pageref" href="#cx-w6-3"></a></td></tr>
 <tr data-k="lecture 6.4 password regex: lazy vs greedy, lookaheads, negative lookahead s.str.fullmatch(r&#x27;(?=.*\d)(?=.*[a-z]{2})[a-za-z0-9]+&#x27;) regex lookahead"><td class="qb-src">Lecture 6.4</td><td>Password regex: lazy vs greedy, lookaheads, negative lookahead</td><td><code>s.str.fullmatch(r&#x27;(?=.*\d)(?=.*[a-z]{2})[A-Za-z0-9]+&#x27;)</code></td><td><a class="pageref" href="#rxa-password"></a></td></tr>
 <tr data-k="lecture 6.5 billboard: capitalize titles, long first word, split singers, lil → little s.str.split(r&#x27; &amp; | featuring &#x27;, regex=true, expand=true) str methods split replace"><td class="qb-src">Lecture 6.5</td><td>Billboard: capitalize titles, long first word, split singers, Lil → Little</td><td><code>s.str.split(r&#x27; &amp; | Featuring &#x27;, regex=True, expand=True)</code></td><td><a class="pageref" href="#cx-w6-5"></a></td></tr>
-</tbody></table>
+</tbody></table></div>
 
 <h2 id="mi">Method index A–Z: where every function is used</h2>
 <p>Every NumPy, pandas, <code>.str</code>, <code>.dt</code>, regex and built-in function that appears in this manual's code (226 names), with links to the sections where it is used. Built automatically from all the code blocks. Filter by name: <code>idxmax</code>, <code>str.</code>, <code>np.</code>, <code>pivot</code>.</p>
-<div class="filterbox"><input type="search" class="tfilter" data-target="mi-table" placeholder="Filter methods… e.g. pivot, str., idxmax, date" aria-label="Filter the method index"><span class="fcount"></span></div>
+<div class="fwrap"><div class="filterbox"><input type="search" class="tfilter" data-target="mi-table" placeholder="Filter methods… e.g. pivot, str., idxmax, date" aria-label="Filter the method index"><span class="fcount"></span></div>
 <table id="mi-table" class="mit"><thead><tr><th>Function / method</th><th>Uses</th><th>Where it is used (first sections)</th></tr></thead><tbody>
 <tr data-k="np.abs"><td><code>np.abs</code></td><td class="num">2</td><td><a href="#np-math">Mathematical functions</a> · <a href="#st-closest">Closest-to-target problems</a></td></tr>
 <tr data-k=".abs()"><td><code>.abs()</code></td><td class="num">20</td><td><a href="#lookup-demo">Worked mini-demo of the lookup table</a> · <a href="#q-dogs-q5">Dogs · Q5 — Years closest to mean − std and mean + std (6 pt</a> · <a href="#st-z">Z-scores and outliers</a> · <a href="#st-closest">Closest-to-target problems</a> · <a href="#st-sortdist">Sorting by distance from a target</a> · <a href="#t-59">T59 — Closest value to a target (label and row)</a> <span class="muted">+6 more</span></td></tr>
@@ -1378,7 +1379,7 @@ True
 <tr data-k=".dt.year"><td><code>.dt.year</code></td><td class="num">2</td><td><a href="#pd-str-dt">apply on rows/elements; the .str and .dt accessors</a> · <a href="#dt-parts">Pulling parts out with .dt</a></td></tr>
 <tr data-k="np.zeros"><td><code>np.zeros</code></td><td class="num">2</td><td><a href="#np-zeros">np.zeros() , np.ones() , np.full()</a> · <a href="#npx-create">Creation gotchas</a></td></tr>
 <tr data-k="zip()"><td><code>zip()</code></td><td class="num">3</td><td><a href="#t-58">T58 — Mode and value counts in NumPy</a> · <a href="#s-25">Solution S25</a> · <a href="#npx-search">sort , argsort , flip , where , argmax , searchsorted , uniq</a></td></tr>
-</tbody></table>
+</tbody></table></div>
 
 <h1 id="how-to-use">How to Use This Manual</h1>
 
@@ -14003,6 +14004,16 @@ dtype: float64</pre></div>
 </script>
 
 <style>
+.fwrap > table { display: block; overflow-x: auto; border-collapse: collapse; margin: 10px 0 18px; font-size: 14px; max-width: 100%; }
+.fwrap > table th { background: var(--accent-soft); color: var(--ink); text-align: left; padding: 7px 10px; border-bottom: 2px solid var(--accent); }
+.fwrap > table td { padding: 6px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.fwrap .noresult { color: var(--muted); font-style: italic; padding: 8px 0; }
+.col > .scoped-off, nav.toc .scoped-off { display: none !important; }
+.scopebar { margin: 0 0 10px; padding: 8px 12px; border: 1px dashed var(--rule); border-radius: 8px; background: var(--rule-bg); font-size: 14px; }
+.scopebar button { font: 600 13px var(--f-body); background: none; border: 0; color: var(--accent); cursor: pointer; text-decoration: underline; padding: 0 4px; }
+.toolmenu label { display: flex; gap: 8px; align-items: flex-start; font-size: 14px; padding: 5px 10px; cursor: pointer; border-radius: 6px; }
+.toolmenu label:hover { background: var(--accent-soft); }
+.toolmenu .sep { border-top: 1px solid var(--line); margin: 6px 0; }
 .filterbox { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 60px); z-index: 5; background: var(--bg); padding: 8px 0; display: flex; gap: 10px; align-items: center; }
 .tfilter { flex: 1; max-width: 560px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); color: var(--ink); font: 15px var(--f-body); }
 .fcount { font-size: 12px; color: var(--muted); white-space: nowrap; }
@@ -14033,6 +14044,7 @@ h2:hover .pinbtn, h3:hover .pinbtn, .pinbtn.on, .pinbtn:focus-visible { opacity:
     set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
   };
   const bar = document.querySelector(".bar");
+  const toc = document.getElementById("toc");
   const col = document.querySelector(".col");
   const mk = (h) => { const t = document.createElement("template"); t.innerHTML = h.trim(); return t.content.firstChild; };
 
@@ -14044,10 +14056,20 @@ h2:hover .pinbtn, h3:hover .pinbtn, .pinbtn.on, .pinbtn:focus-visible { opacity:
     const run = () => {
       const terms = inp.value.toLowerCase().trim().split(/\s+/).filter(Boolean);
       let n = 0;
-      rows.forEach(r => { const k = r.dataset.k + " " + r.textContent.toLowerCase(); const ok = terms.every(t => k.includes(t)); r.hidden = !ok; if (ok) n++; });
+      rows.forEach(r => { const k = r.dataset.k; const ok = terms.every(t => k.includes(t)); r.hidden = !ok; if (ok) n++; });
       cnt.textContent = n + " of " + rows.length;
     };
-    inp.addEventListener("input", run); run();
+    const empty = document.createElement("div"); empty.className = "noresult"; empty.hidden = true;
+    empty.textContent = "No match. Try fewer letters, or use the search box at the top of the page.";
+    table.after(empty);
+    const run2 = () => { run(); empty.hidden = rows.some(r => !r.hidden); };
+    inp.addEventListener("input", run2);
+    inp.addEventListener("keydown", e => {
+      if (e.key !== "Enter") return;
+      const first = rows.find(r => !r.hidden); if (!first) return;
+      const a = first.querySelector("a[href^='#']"); if (a) { e.preventDefault(); a.click(); }
+    });
+    run2();
   });
 
   // ---------- exam timer
@@ -14107,6 +14129,104 @@ h2:hover .pinbtn, h3:hover .pinbtn, .pinbtn.on, .pinbtn:focus-visible { opacity:
     if (pins.length) { const c = document.createElement("button"); c.type = "button"; c.textContent = "Clear all pins"; c.onclick = () => { pins = []; savePins(); document.querySelectorAll(".pinbtn.on").forEach(x => { x.classList.remove("on"); x.textContent = "☆"; }); closeMenu(); }; menu.appendChild(c); }
     pw.appendChild(menu);
   });
+
+
+  // ---------- scope: hide whole parts so Ctrl/⌘-F only finds what you care about
+  const OOS = ["part7", "dt", "sm", "rxa", "lab-9", "cx-w6-3", "cx-w6-4", "cx-w6-5", "qr-regex", "tp-text", "edmap-x"];
+  const kids = Array.from(col.children);
+  const parts = [];
+  let p = null, s2 = null, s3 = null;
+  kids.forEach(el => {
+    if (el.tagName === "H1" && el.id) { p = el.id; s2 = null; s3 = null; parts.push({ id: p, title: el.textContent.replace(/[☆★]/g, "").trim() }); }
+    else if (el.tagName === "H2" && el.id) { s2 = el.id; s3 = null; }
+    else if (el.tagName === "H3" && el.id) { s3 = el.id; }
+    el.dataset.p = p || "top"; el.dataset.s = s2 || ""; el.dataset.t = s3 || "";
+  });
+  const navBlocks = Array.from(toc.querySelectorAll(".navpart"));
+  const navPart = nb => { const a = nb.querySelector("summary a"); return a ? a.getAttribute("href").slice(1) : ""; };
+  const PRESETS = {
+    all:   { label: "Everything", parts: null, oos: false },
+    exam:  { label: "Midterm scope (hide 6.3–6.5: dates, regex, .str)", parts: null, oos: true },
+    quick: { label: "Quick lookup only (briefing, Ed map, cheat sheets, templates, problem guide)", parts: ["exam-day", "edmap", "part1", "part9", "part11", "part10"], oos: true },
+    sol:   { label: "Solutions only (practice midterms, HW, labs, exercises)", parts: ["part2", "part3", "part15"], oos: true },
+    ref:   { label: "Reference only (NumPy, pandas, stats, extras)", parts: ["part4", "part5", "part6", "part8", "part14"], oos: true }
+  };
+  let scope = store.get("orca_scope", { preset: "exam", parts: null, oos: true });
+  const temp = new Set();     // parts opened temporarily by following a link
+  const visible = el => {
+    const pid = el.dataset.p;
+    if (temp.has(pid)) return true;
+    if (scope.parts && pid !== "top" && !scope.parts.includes(pid)) return false;
+    if (scope.oos && (OOS.includes(pid) || OOS.includes(el.dataset.s) || OOS.includes(el.dataset.t))) return false;
+    return true;
+  };
+  const scopeBtn = mk('<div class="toolwrap"><button class="toolbtn" id="scopebtn" type="button" aria-haspopup="true">⚲ <span class="lbl">Scope</span></button></div>');
+  bar.insertBefore(scopeBtn, tw);
+  const sb = scopeBtn.querySelector("button");
+  const banner = mk('<div class="scopebar" id="scopebar" hidden></div>');
+  col.insertBefore(banner, col.firstChild);
+  function applyScope() {
+    let hiddenCount = 0;
+    kids.forEach(el => { const v = visible(el); el.classList.toggle("scoped-off", !v); if (!v && /^H[1-3]$/.test(el.tagName)) hiddenCount++; });
+    navBlocks.forEach(nb => {
+      const pid = navPart(nb);
+      const off = (scope.parts && !scope.parts.includes(pid) && !temp.has(pid)) || (scope.oos && OOS.includes(pid) && !temp.has(pid));
+      nb.classList.toggle("scoped-off", !!off);
+      nb.querySelectorAll("li a").forEach(a => { const id = a.getAttribute("href").slice(1); const li = a.parentElement; li.classList.toggle("scoped-off", !off && scope.oos && OOS.includes(id)); });
+    });
+    const name = scope.preset === "custom" ? "Custom" : PRESETS[scope.preset].label.split(" (")[0];
+    sb.querySelector(".lbl").textContent = scope.preset === "all" ? "Scope" : "Scope: " + name;
+    banner.hidden = scope.preset === "all";
+    banner.innerHTML = "";
+    if (!banner.hidden) {
+      banner.append("Showing ", Object.assign(document.createElement("strong"), { textContent: name }), " (" + hiddenCount + " sections hidden, so Ctrl/⌘-F only finds what's shown). ");
+      const b = document.createElement("button"); b.type = "button"; b.textContent = "Show everything";
+      b.onclick = () => { scope = { preset: "all", parts: null, oos: false }; store.set("orca_scope", scope); temp.clear(); applyScope(); };
+      const c = document.createElement("button"); c.type = "button"; c.textContent = "Change";
+      c.onclick = e => { e.stopPropagation(); sb.click(); };
+      banner.append(b, c);
+    }
+  }
+  sb.addEventListener("click", e => {
+    e.stopPropagation(); if (menu) { closeMenu(); return; }
+    menu = mk('<div class="toolmenu" role="menu" style="min-width:330px"></div>');
+    const h = document.createElement("div"); h.className = "hint"; h.textContent = "Hidden sections are skipped by Ctrl/⌘-F, so you get fewer, more relevant matches. The top search box always searches everything, and clicking a hidden result opens it.";
+    menu.appendChild(h);
+    Object.entries(PRESETS).forEach(([k, v]) => {
+      const b = document.createElement("button"); b.type = "button"; b.textContent = (scope.preset === k ? "● " : "○ ") + v.label;
+      b.onclick = () => { scope = { preset: k, parts: v.parts, oos: v.oos }; store.set("orca_scope", scope); temp.clear(); applyScope(); closeMenu(); };
+      menu.appendChild(b);
+    });
+    menu.appendChild(Object.assign(document.createElement("div"), { className: "sep" }));
+    menu.appendChild(Object.assign(document.createElement("div"), { className: "hint", textContent: "Custom: tick the parts to show" }));
+    parts.forEach(pt => {
+      const l = document.createElement("label"); const cb = document.createElement("input"); cb.type = "checkbox";
+      cb.checked = !scope.parts || scope.parts.includes(pt.id);
+      cb.onchange = () => {
+        const cur = scope.parts ? scope.parts.slice() : parts.map(x => x.id);
+        const next = cb.checked ? Array.from(new Set(cur.concat(pt.id))) : cur.filter(x => x !== pt.id);
+        scope = { preset: "custom", parts: next, oos: scope.oos }; store.set("orca_scope", scope); applyScope();
+      };
+      l.append(cb, document.createTextNode(pt.title)); menu.appendChild(l);
+    });
+    const l2 = document.createElement("label"); const cb2 = document.createElement("input"); cb2.type = "checkbox"; cb2.checked = scope.oos;
+    cb2.onchange = () => { scope = { preset: scope.preset === "all" || scope.preset === "exam" ? (cb2.checked ? "exam" : "all") : "custom", parts: scope.parts, oos: cb2.checked }; store.set("orca_scope", scope); applyScope(); };
+    l2.append(cb2, document.createTextNode("Hide topics not on the midterm (6.3–6.5)")); menu.appendChild(l2);
+    scopeBtn.appendChild(menu);
+  });
+  // following a link (nav, search result, cross-reference) into a hidden part opens that part temporarily
+  const reveal = () => {
+    const id = decodeURIComponent(location.hash.slice(1)); const el = id && document.getElementById(id);
+    if (!el || !el.classList.contains("scoped-off")) return;
+    temp.add(el.dataset.p);
+    if (OOS.includes(el.dataset.s) || OOS.includes(el.dataset.t) || OOS.includes(el.dataset.p)) { kids.forEach(k => { if (k.dataset.s === el.dataset.s) k.classList.remove("scoped-off"); }); }
+    applyScope();
+    kids.forEach(k => { if (k.dataset.s && k.dataset.s === el.dataset.s) k.classList.remove("scoped-off"); });
+    el.scrollIntoView();
+  };
+  addEventListener("hashchange", reveal);
+  document.addEventListener("click", e => { const a = e.target.closest("a[href^='#']"); if (a && a.getAttribute("href") === location.hash) setTimeout(reveal, 0); });
+  applyScope(); reveal();
 
   // ---------- back to top
   const top = document.getElementById("totop");
