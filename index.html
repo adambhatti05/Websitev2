@@ -195,9 +195,15 @@ a.pageref { text-decoration: none; white-space: nowrap; }
 <div class="shell">
   <nav class="toc" id="toc" aria-label="Contents"><details class="navpart" open><summary><a href="#exam-day">Exam Day Briefing — Friday, October 30</a></summary><ol>
 <li><a href="#ed-format">What the midterm will look like</a></li>
-<li><a href="#ed-coverage">Everything that is fair game (Weeks 1–6)</a></li>
+<li><a href="#ed-coverage">Everything that is fair game (Weeks 1 → Lecture 6.2)</a></li>
 <li><a href="#ed-wording">How this professor words questions</a></li>
 <li><a href="#ed-toolkit">Exam toolkit: the first cells to paste</a></li>
+</ol></details>
+<details class="navpart" open><summary><a href="#edmap">Ed Map — where everything is on Ed</a></summary><ol>
+<li><a href="#edmap-cheats">The week-summary cheat sheets (the office hours said to use these)</a></li>
+<li><a href="#edmap-lectures">Lecture lessons by week (✅ = on the midterm)</a></li>
+<li><a href="#edmap-practice">Coding practice notebooks inside the lectures</a></li>
+<li><a href="#edmap-graded">Labs, homework and practice midterms</a></li>
 </ol></details>
 <details class="navpart" open><summary><a href="#finder">Quick Finder</a></summary><ol>
 <li><a href="#qb">Question bank (every course question)</a></li>
@@ -360,8 +366,11 @@ a.pageref { text-decoration: none; white-space: nowrap; }
       <div class="eyebrow">Columbia · ORCA E2500 Foundations of Data Science · Fall 2026 midterm · Fri Oct 30, 10:10–12:40, MUDD 833</div>
       <h1 class="title">Midterm Reference Manual</h1>
       <p>Both practice midterms solved and verified against the real Spotify and NYC dog data. Every homework, lab and lecture practice notebook from Weeks 1–6 is solved too. Also here: the lecture topics the practice exams skipped (merge, melt/pivot, dates, string methods, lookaround regex, missing values), NumPy, pandas, regex and statistics references, 62 copy-ready templates, fixes for every common error, and a 40-question self-check. Search anything above, or jump in:</p>
+      <div class="box box-verify" style="margin-top:12px"><div class="box-title">Office hours, Oct 29</div><div class="box-body"><p>Same format as the practice midterms · content <strong>up to Lecture 6.2</strong> · mostly NumPy + pandas: basics, <strong>groupby</strong>, <strong>pivot_table</strong>, maybe a bonus · <strong>loops are allowed</strong> · use the <a href="#edmap-cheats">Ed week-summary cheat sheets</a>.</p></div></div>
       <div class="quick">
         <a href="#exam-day">Exam-day briefing</a>
+        <a href="#edmap">Ed map (links to every lesson)</a>
+        <a href="#edmap-cheats">Ed week-summary cheat sheets</a>
         <a href="#qb">Question bank</a>
         <a href="#mi">Method index A–Z</a>
         <a href="#ed-toolkit">First cells to paste</a>
@@ -380,6 +389,13 @@ a.pageref { text-decoration: none; white-space: nowrap; }
     
 <h1 id="exam-day">Exam Day Briefing — Friday, October 30</h1>
 
+<div class="box box-verify"><div class="box-title">From office hours (Thu Oct 29): what the midterm actually covers</div><div class="box-body"><ul>
+<li><strong>Very similar format to the practice midterms</strong>: a NumPy notebook and a pandas notebook. <a href="#part2">Spring '26 solved</a> · <a href="#part3">Fall '25 solved</a></li>
+<li><strong>Content goes up to Lecture 6.2</strong> (summary statistics and groupby). Dates (6.3), regex (6.4) and <code>.str</code> methods (6.5) are <strong>not</strong> on it.</li>
+<li><strong>Mostly NumPy and pandas:</strong> basic examples, <strong><code>groupby</code></strong>, <strong><code>pivot_table</code></strong>, and maybe a <strong>bonus</strong> question. → <a href="#qr-groupby">GroupBy cheat sheet</a> · <a href="#qr-pivot">Pivot cheat sheet</a> · <a href="#tp-groupby">GroupBy templates</a> · <a href="#tp-pivot">Pivot templates</a></li>
+<li><strong>Loops and list comprehensions are allowed</strong> and will <strong>not</strong> lose points. Use whatever you can write fastest and get right.</li>
+<li><strong>Use the cheat sheets in the Ed week summaries.</strong> Direct links are in the <a href="#edmap">Ed map</a>.</li>
+</ul></div></div>
 <div class="box box-warn"><div class="box-title">Logistics (from the official &quot;Midterm Exam Instructions&quot; announcement on Ed)</div><div class="box-body"><ul>
 <li><strong>When:</strong> Friday 10/30, <strong>10:10 am – 12:40 pm</strong> (150 minutes). <strong>Where:</strong> MUDD 833 (the usual lecture room).</li>
 <li><strong>Bring a fully charged laptop.</strong> Outlets are scarce, so bring a power strip if you have one.</li>
@@ -394,7 +410,7 @@ a.pageref { text-decoration: none; white-space: nowrap; }
 <li>Computer-based, in Ed Lessons. <strong>Open notes, open book, open web:</strong> Ed notes, your homework, Google, static documentation pages and this manual are all allowed.</li>
 <li><strong>No AI of any kind:</strong> ChatGPT, Claude, Copilot, Google AI Overviews, AI Mode. <strong>No collaboration:</strong> discussing, giving or soliciting help is cheating (an F in the course).</li>
 <li>Each exercise is a <strong>separate notebook and is submitted separately.</strong> You can submit more than once, and you may add code or markdown cells.</li>
-<li>The practice midterms say "if possible, don't use loops or list comprehensions" (no penalty there), but the homework <em>does</em> take points off for loops. Prefer whole-column NumPy/pandas operations.</li>
+<li><strong>Loops and list comprehensions are fine on the midterm</strong> (confirmed in office hours, no point loss). Whole-column operations are still usually shorter. (The homework <em>did</em> penalise loops.)</li>
 <li>The midterm is <strong>25 % of your grade</strong>. There is no final exam.</li>
 </ul></div></div>
 <h2 id="ed-format">What the midterm will look like</h2>
@@ -425,9 +441,9 @@ a.pageref { text-decoration: none; white-space: nowrap; }
 </tbody>
 </table>
 <p>The professor's advice (Ed post "Practice Midterms published"): <strong>practice finishing in 2 h 30 min.</strong> A large part of doing well is finishing on time. Prepare with the lecture practice notebooks, the labs and the assignments. All of them are solved in <a href="#part15">Part XV</a>.</p>
-<h2 id="ed-coverage">Everything that is fair game (Weeks 1–6)</h2>
+<h2 id="ed-coverage">Everything that is fair game (Weeks 1 → Lecture 6.2)</h2>
 
-<p>The midterm covers what was taught before October 30: Weeks 1–6. Week 7 (EDA and visualisation) onward comes after the exam. Where each topic lives in this manual:</p>
+<p>Office hours: the midterm goes <strong>up to Lecture 6.2</strong>, so rows 1–5 and the 6.1/6.2 part of row 6 are fair game. Dates, regex and <code>.str</code> methods (6.3–6.5) are not. Where each topic lives in this manual:</p>
 <table>
 <thead>
 <tr>
@@ -463,13 +479,18 @@ a.pageref { text-decoration: none; white-space: nowrap; }
 <td><a href="#mv">Missing values</a>, <a href="#rs">Reshaping</a></td>
 </tr>
 <tr>
-<td>6</td>
-<td><code>merge</code> (4 joins, multi-key), <code>concat</code> (axis, join), <code>rename</code>, <code>describe</code>, var/std <code>ddof</code>, quantiles, <code>groupby</code> + <code>agg/apply/rank/head</code>, dates (<code>to_datetime</code>, timedelta, <code>BDay</code>, <code>.dt</code>), regex (classes, quantifiers, greedy/lazy, lookarounds, overlap), <code>.str</code> methods</td>
-<td><a href="#mg">Merge &amp; concat</a>, <a href="#gbx">GroupBy extras</a>, <a href="#dt">Dates</a>, <a href="#rxa">Regex extras</a>, <a href="#sm">String methods</a></td>
+<td>6.1–6.2 ✅</td>
+<td><code>merge</code> (4 joins, multi-key), <code>concat</code> (axis, join), <code>rename</code>, <code>describe</code>, var/std <code>ddof</code>, quantiles, <strong><code>groupby</code> + <code>agg/apply/rank/head</code></strong></td>
+<td><a href="#mg">Merge &amp; concat</a>, <a href="#gbx">GroupBy extras</a>, <a href="#pd-groupby">GroupBy reference</a></td>
+</tr>
+<tr>
+<td>6.3–6.5 ✖ not on midterm</td>
+<td>dates, regex (lookarounds etc.), <code>.str</code> methods</td>
+<td><a href="#dt">Dates</a>, <a href="#rxa">Regex extras</a>, <a href="#sm">String methods</a>, kept for reference</td>
 </tr>
 </tbody>
 </table>
-<div class="box box-tip"><div class="box-title">Topics that were lectured but are NOT in either practice midterm</div><div class="box-body"><p><code>merge</code>/<code>concat</code>, <code>melt</code>/<code>pivot</code>, dates and times, <code>.str</code> string methods, lookaround regex, missing values, <code>rank</code>. Part XIV covers each of these with runnable examples, and the lab and homework versions are solved in Part XV.</p></div></div>
+<div class="box box-tip"><div class="box-title">Topics that were lectured but are NOT in either practice midterm</div><div class="box-body"><p>Within scope (≤ 6.2): <code>merge</code>/<code>concat</code>, <code>melt</code>/<code>pivot</code>, missing values, <code>rank</code>, <code>describe</code>/<code>ddof</code>. Part XIV covers each of these with runnable examples, and the lab and homework versions are solved in Part XV.</p></div></div>
 <h2 id="ed-wording">How this professor words questions</h2>
 
 <p>These phrases recur across the homework, labs and both practice midterms. Each one tells you what the grader wants.</p>
@@ -489,7 +510,7 @@ a.pageref { text-decoration: none; white-space: nowrap; }
 </tr>
 <tr>
 <td>"You cannot separately study each year one by one. They should be done at the same time."</td>
-<td>One <code>groupby</code> (or <code>pivot_table</code>). No copy-pasted block per group and no loop.</td>
+<td>One <code>groupby</code> (or <code>pivot_table</code>). Don't copy-paste a block per group.</td>
 <td>Dogs Q4</td>
 </tr>
 <tr>
@@ -540,7 +561,7 @@ a.pageref { text-decoration: none; white-space: nowrap; }
 </tbody>
 </table>
 <div class="box box-mistake"><div class="box-title">Habits from your own submissions to fix before the exam</div><div class="box-body"><ul>
-<li><strong>Loops where one mask works.</strong> HW1 Ex3 Q3 built the top-5 arrays with four <code>for</code> loops. A single mask does it: <code>top = ranking &lt;= 5; hurricane[top]</code>. See <a href="#hw1-ex3">HW1 Ex3</a>.</li>
+<li><strong>Loops are allowed, but often slower to write.</strong> HW1 Ex3 Q3 used four <code>for</code> loops where one mask does it: <code>top = ranking &lt;= 5; hurricane[top]</code>. Use a loop only when it's genuinely quicker for you. See <a href="#hw1-ex3">HW1 Ex3</a>.</li>
 <li><strong>Copy-paste per group.</strong> HW2 Ex2 Q8 and Q9 repeated a block for each type and each generation. One <code>groupby(...).agg(...)</code> or <code>pivot_table</code> does it. See <a href="#hw2-q8">HW2 Ex2 Q8–Q9</a>.</li>
 <li><strong>Typos in variable names.</strong> Lab 1 defined <code>paper_thickness_mm</code> and then used <code>paper_thickness_ml</code> (NameError). Run every cell top to bottom (<em>Restart &amp; Run All</em>) before you submit.</li>
 <li><strong>Lab 2's DNA bonus</strong> compared with <code>i == "T"</code> instead of assigning, so nothing changed. Build a new string with a dictionary instead. See <a href="#lab-2">Lab 2</a>.</li>
@@ -713,6 +734,343 @@ True
 <li>Keep any variable names the question gives you (e.g. <code>temps</code>, <code>songs</code>, <code>Array1</code>). Graders look for them.</li>
 <li>If something breaks badly, fix it in a <strong>new cell</strong> below. Don't overwrite a cell that already gives a correct answer.</li>
 </ul>
+
+<h1 id="edmap">Ed Map — where everything is on Ed</h1>
+
+<p>Every lesson in the course, linked directly. Links open in a <strong>new tab</strong>, so this manual stays where it is. In the exam, keep <strong>three tabs</strong>: your exam notebook, this manual, and one Ed lesson tab.</p>
+<div class="box box-tip"><div class="box-title">How to move around Ed quickly</div><div class="box-body"><ul>
+<li><strong>All lessons:</strong> <a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons">Ed Lessons list</a>. Modules run top to bottom: Course Introduction → Week 1 … Week 6 → Homeworks → Exams.</li>
+<li><strong>Inside a lesson,</strong> the left sidebar lists its slides. Click a title to jump to it. The arrow at the top left goes back to the lessons list.</li>
+<li><strong>Ctrl/⌘-click</strong> any link here to open it in a new tab, and <strong>Ctrl/⌘-Tab</strong> (or Ctrl-PageUp/PageDown) switches between tabs.</li>
+<li><strong>Ctrl/⌘-F</strong> inside an Ed slide finds a method name on that slide.</li>
+<li><strong>Closed lessons</strong> (labs, homeworks, practice midterms) open on a "Lesson Closed" screen. Click <strong>View</strong> (or <strong>View submissions</strong> for labs) to read them.</li>
+</ul></div></div>
+<h2 id="edmap-cheats">The week-summary cheat sheets (the office hours said to use these)</h2>
+
+<table>
+<thead>
+<tr>
+<th>Cheat sheet on Ed</th>
+<th>Covers</th>
+<th>Open</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WEEK1.SUMMARY: Week 1 recap</td>
+<td>types, arithmetic <code>// % **</code>, comparisons, <code>and/or/not</code>, variables</td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/181551">open</a></td>
+</tr>
+<tr>
+<td>WEEK2.SUMMARY: Week 2 recap (slide 1)</td>
+<td>if/elif, tuple/list/dict, slicing, loops, functions, import, classes, list/dict methods</td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/181555">open</a></td>
+</tr>
+<tr>
+<td>WEEK2.SUMMARY: <strong>Python Basics Summary</strong> (slide 2)</td>
+<td>one-page Python cheat sheet</td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/181555/slides/1073627">open</a></td>
+</tr>
+<tr>
+<td>WEEK3.SUMMARY: Week 3 recap (slide 1)</td>
+<td>arrays, creation, masks, sort/argsort/where/unique, 2-D, <code>axis</code></td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/181560">open</a></td>
+</tr>
+<tr>
+<td>WEEK3.SUMMARY: <strong>NumPy Summary</strong> (slide 2)</td>
+<td>one-page NumPy cheat sheet</td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/181560/slides/1090793">open</a></td>
+</tr>
+<tr>
+<td>WEEK6.SUMMARY: Week 6 recap (slide 1)</td>
+<td>merge/concat, statistics + groupby, (dates, regex, strings)</td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/181574">open</a></td>
+</tr>
+<tr>
+<td>WEEK6.SUMMARY: <strong>Pandas Summary</strong> (slide 2)</td>
+<td>one-page pandas cheat sheet</td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/181574/slides/1068961">open</a></td>
+</tr>
+</tbody>
+</table>
+<p>There are no summary lessons for Weeks 4 and 5. For those, use the lecture slides below or this manual's <a href="#qr-pandas">pandas cheat sheet</a> and <a href="#part6">Part VI</a>.</p>
+<h2 id="edmap-lectures">Lecture lessons by week (✅ = on the midterm)</h2>
+
+<table>
+<thead>
+<tr>
+<th>Week</th>
+<th>Ed lesson (slides in order)</th>
+<th>Manual section</th>
+<th>Open</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Intro</td>
+<td>Syllabus: grading, dates, AI policy, project rules</td>
+<td><a href="#exam-day">Exam-day briefing</a></td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/181548">open</a></td>
+</tr>
+<tr>
+<td>1 ✅</td>
+<td>WEEK1.1 Basic Data Types and Variable: types · arithmetic · string, comparison and Boolean operators · variables · references</td>
+<td><a href="#part4">Python reference</a></td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/181549">open</a></td>
+</tr>
+<tr>
+<td>2 ✅</td>
+<td>WEEK2.1 Conditionals and Iterations: if/elif · tuple · list · dict · unpacking · indexing · replacing · loops · slicing</td>
+<td><a href="#py-collections">Collections</a></td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/181552">open</a></td>
+</tr>
+<tr>
+<td>2 ✅</td>
+<td>WEEK2.2 Function, Method, and Attribute: def · built-ins · import · OOP · class · list methods · dict methods</td>
+<td><a href="#py-control">Control flow &amp; functions</a>, <a href="#pyx">Python extras</a></td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/181553">open</a></td>
+</tr>
+<tr>
+<td>3 ✅</td>
+<td>WEEK3.1 NumPy basics: why arrays · import · create · indexing · replacement · operations · functions · append/insert/delete · Boolean masks</td>
+<td><a href="#part5">NumPy reference</a></td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/181557">open</a></td>
+</tr>
+<tr>
+<td>3 ✅</td>
+<td>WEEK3.2 More NumPy: sort/argsort/flip · where/argmax/searchsorted · unique · 2-D arrays, <code>axis</code>, <code>@</code>, reshape</td>
+<td><a href="#npx">NumPy extras</a></td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/181558">open</a></td>
+</tr>
+<tr>
+<td>4 ✅</td>
+<td>WEEK4.1 Pandas Intro: Series · operators and label alignment · DataFrame · loading CSV · dtypes · examining</td>
+<td><a href="#pd-fund">DataFrame fundamentals</a></td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/181562">open</a></td>
+</tr>
+<tr>
+<td>4 ✅</td>
+<td>WEEK4.2 Getting a Subtable: <code>iloc</code>/<code>loc</code> · slicing · Boolean conditions · Series loc/iloc · shortcuts</td>
+<td><a href="#pd-select">Selecting data</a>, <a href="#pd-loc">loc vs iloc</a></td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/181563">open</a></td>
+</tr>
+<tr>
+<td>5 ✅</td>
+<td>WEEK 5.1 Updating Table Information: loc/iloc assignment · data cleaning · missing-value causes · placeholders → NaN · isna/dropna/fillna/ffill</td>
+<td><a href="#mv">Missing values</a></td>
+<td>Lessons list → <strong>Week5</strong>, 1st lesson (<a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons">list</a>)</td>
+</tr>
+<tr>
+<td>5 ✅</td>
+<td>WEEK 5.2 Sorting and Reshaping Tables: tidy data · <code>pivot</code>/<code>pivot_table</code> · <code>melt</code> · <code>sort_values</code> · add/drop columns · poll</td>
+<td><a href="#rs">Reshaping</a>, <a href="#qr-pivot">Pivot cheat sheet</a></td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/181565">open</a></td>
+</tr>
+<tr>
+<td>6 ✅</td>
+<td>WEEK 6.1 Integrating Datasets and Merging: merge on one / several columns · concat · changing labels</td>
+<td><a href="#mg">Merge &amp; concat</a></td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/181568">open</a></td>
+</tr>
+<tr>
+<td>6 ✅</td>
+<td>WEEK 6.2 Data Summarization and GroupBy: <code>describe</code> · basic statistics (var/std, quantiles) · groupby · groupby methods (rank, head…) · poll</td>
+<td><a href="#pd-groupby">GroupBy</a>, <a href="#gbx">GroupBy extras</a>, <a href="#qr-groupby">GroupBy cheat sheet</a></td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/181569">open</a></td>
+</tr>
+<tr>
+<td>6 ✖</td>
+<td>WEEK 6.3 Date and Time Data</td>
+<td><a href="#dt">Dates</a></td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/181573">open</a></td>
+</tr>
+<tr>
+<td>6 ✖</td>
+<td>WEEK 6.4 Strings and Regular Expressions</td>
+<td><a href="#rxa">Regex extras</a></td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/181572">open</a></td>
+</tr>
+<tr>
+<td>6 ✖</td>
+<td>WEEK 6.5 Pandas String Methods</td>
+<td><a href="#sm">String methods</a></td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/181571">open</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="edmap-practice">Coding practice notebooks inside the lectures</h2>
+
+<table>
+<thead>
+<tr>
+<th>Lesson</th>
+<th>Notebook (last slide of the lesson)</th>
+<th>Solved here</th>
+<th>Open</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.1</td>
+<td>Coding Practice: simple interest</td>
+<td><a href="#cx-w1">solution</a></td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/181549/slides/1068815">open</a></td>
+</tr>
+<tr>
+<td>2.1</td>
+<td>Coding Practice: pets lists/dict</td>
+<td><a href="#cx-w2-1">solution</a></td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/181552/slides/1068832">open</a></td>
+</tr>
+<tr>
+<td>2.2</td>
+<td>Coding Practice: <code>math.prod</code>, dict key, cumsum</td>
+<td><a href="#cx-w2-2">solution</a></td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/181553/slides/1068842">open</a></td>
+</tr>
+<tr>
+<td>3.1</td>
+<td>numpy practices: Frozen arrays</td>
+<td><a href="#cx-w3-1">solution</a></td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/181557/slides/1068856">open</a></td>
+</tr>
+<tr>
+<td>3.2</td>
+<td>numpy practices: sort/argmax/unique</td>
+<td><a href="#cx-w3-2">solution</a></td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/181558/slides/1068862">open</a></td>
+</tr>
+<tr>
+<td>4.1</td>
+<td>Frozen.ipynb: load and examine</td>
+<td><a href="#cx-w4-1">solution</a></td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/181562/slides/1068874">open</a></td>
+</tr>
+<tr>
+<td>4.2</td>
+<td>Fozen.ipynb: loc/iloc/masks</td>
+<td><a href="#cx-w4-2">solution</a></td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/181563/slides/1068887">open</a></td>
+</tr>
+<tr>
+<td>5.2</td>
+<td>Exercise.ipynb: dairy pivot/melt/sort</td>
+<td><a href="#cx-w5-2">solution</a></td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/181565/slides/1068897">open</a></td>
+</tr>
+<tr>
+<td>6.1</td>
+<td>Merge and Concatenation.ipynb</td>
+<td><a href="#cx-w6-1">solution</a></td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/181568/slides/1068916">open</a></td>
+</tr>
+<tr>
+<td>6.2</td>
+<td>Exercise.ipynb: dairy groupby</td>
+<td><a href="#cx-w6-2">solution</a></td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/181569/slides/1068923">open</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="edmap-graded">Labs, homework and practice midterms</h2>
+
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>What it practises</th>
+<th>Solved here</th>
+<th>Open on Ed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Practice Midterm Spring '26</strong>: Exercise 1 (NumPy)</td>
+<td>linspace, masks, harmonic sum</td>
+<td><a href="#ex1-nb">Part II</a></td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/186289/slides/1102167">open</a></td>
+</tr>
+<tr>
+<td><strong>Practice Midterm Spring '26</strong>: Exercise 2 (Spotify)</td>
+<td>value_counts, groupby, pivot_table, replace, bonus</td>
+<td><a href="#ex2-nb">Part II</a></td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/186289/slides/1102168">open</a></td>
+</tr>
+<tr>
+<td><strong>Practice Midterm Fall '25</strong>: Exercise 1</td>
+<td>geometric sum, diff, one regex</td>
+<td><a href="#x1-nb">Part III</a></td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/186287/slides/1102162">open</a></td>
+</tr>
+<tr>
+<td><strong>Practice Midterm Fall '25</strong>: Exercise 2 (Dogs)</td>
+<td>top-k, gender-neutral pivot, map, per-year table</td>
+<td><a href="#dogs-nb">Part III</a></td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/186287/slides/1102163">open</a></td>
+</tr>
+<tr>
+<td>Assignment 1: Ex 1 / 2 / 3</td>
+<td>int64 vs float, array creation, hurricanes</td>
+<td><a href="#hw1-ex1">HW1</a></td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/183773/slides/1085098">Ex1</a> · <a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/183773/slides/1085099">Ex2</a> · <a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/183773/slides/1085100">Ex3</a></td>
+</tr>
+<tr>
+<td>Assignment 2: Ex 1 / 2</td>
+<td>Billboard selection; Pokémon melt/merge/groupby</td>
+<td><a href="#hw2-ex1">HW2</a></td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/183774/slides/1085102">Ex1</a> · <a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/183774/slides/1085103">Ex2</a></td>
+</tr>
+<tr>
+<td>Lab 1: Race to the moon</td>
+<td>log2, while</td>
+<td><a href="#lab-1">Lab 1</a></td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/181550/attempts?slide=1068817">open</a></td>
+</tr>
+<tr>
+<td>Lab 2: Palindromes</td>
+<td>strings, slicing</td>
+<td><a href="#lab-2">Lab 2</a></td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/181554/attempts?slide=1068843">open</a></td>
+</tr>
+<tr>
+<td>Lab 3: Pokémon duel</td>
+<td>classes</td>
+<td><a href="#lab-3">Lab 3</a></td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/181556/attempts?slide=1068845">open</a></td>
+</tr>
+<tr>
+<td>Lab 4: Faulty sensor</td>
+<td>np.diff, functions</td>
+<td><a href="#lab-4">Lab 4</a></td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/181559/attempts?slide=1068863">open</a></td>
+</tr>
+<tr>
+<td>Lab 6: Pandas detective</td>
+<td>loc/iloc, masks, idxmax</td>
+<td><a href="#lab-6">Lab 6</a></td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/181564/attempts?slide=1068888">open</a></td>
+</tr>
+<tr>
+<td>Lab 7: Reshaping the world</td>
+<td>melt, pivot_table, sort</td>
+<td><a href="#lab-7">Lab 7</a></td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/181567/attempts?slide=1068909">open</a></td>
+</tr>
+<tr>
+<td>Lab 8: Dairy farms</td>
+<td>merge + groupby + cut</td>
+<td><a href="#lab-8">Lab 8</a></td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/181570/attempts?slide=1068926">open</a></td>
+</tr>
+<tr>
+<td>Lab 9: Twin paradox (6.3–6.5, not on midterm)</td>
+<td>dates, regex</td>
+<td><a href="#lab-9">Lab 9</a></td>
+<td><a target="_blank" rel="noopener" href="https://edstem.org/us/courses/105746/lessons/181575/attempts?slide=1068962">open</a></td>
+</tr>
+</tbody>
+</table>
+<p>The lab links open your own submission ("Changes will not be saved"), so you can read your code without changing anything.</p>
 
 <h1 id="finder">Quick Finder</h1>
 <p>Two lookup tables for the exam: every question the course has asked, and every function in this manual with links to where it is used. Both filter as you type. For anything else, use the search box at the top (press <span class="kbd">/</span>). Hover any heading and click ☆ to pin it to the ★ Pins menu.</p>
@@ -12271,7 +12629,7 @@ False True
 3 -3 2 1 -3 7</pre></div>
 <h1 id="part15">Part XV — Solved Course Homework, Labs and Lecture Exercises</h1>
 
-<p>Model answers for every notebook on Ed so far. They follow the course's rules: no loops where a column operation works, nothing read off by eye, and the required function used where the question names one.</p>
+<p>Model answers for every notebook on Ed so far. They use whole-column operations (loops are allowed on the midterm but are usually longer), nothing is read off by eye, and the required function is used wherever a question names one.</p>
 <div class="box box-note"><div class="box-title">Which outputs use the real data</div><div class="box-body"><ul>
 <li><strong>Real data:</strong> HW1 (all values are in the notebook), Lab 1–7, and the Week 1–4 exercises. For Frozen_20 I use the 18 weeks shown in the Ed file preview.</li>
 <li><strong>HW2 Ex1 and the 6.5 string exercise</strong> need <code>Billboard.csv</code> (week of Jan 30, 2021), which isn't available here. They run on the lecture's own Billboard Hot 100 (week of Oct 3, 2026, from Lecture 4.2), with columns renamed to the homework's names. The <em>code</em> is exactly what you'd submit. Only the numbers differ.</li>
